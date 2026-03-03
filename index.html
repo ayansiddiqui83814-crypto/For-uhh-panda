@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Iqra ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #ffdde1, #ee9ca7);
+    text-align: center;
+    color: white;
+    overflow-x: hidden;
+}
+
+.container {
+    padding: 50px 20px;
+}
+
+h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 60px;
+}
+
+.gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+}
+
+.memory {
+    max-width: 600px;
+}
+
+.memory img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    transition: 0.4s;
+}
+
+.memory img:hover {
+    transform: scale(1.05);
+}
+
+.caption {
+    margin-top: 15px;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+button {
+    margin-top: 40px;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 30px;
+    background: #ff4e91;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.secret-letter {
+    display: none;
+    margin-top: 40px;
+    background: white;
+    color: #444;
+    padding: 30px;
+    border-radius: 15px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    animation: fadeIn 2s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.8); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+/* 🌹 Rose Petals */
+.petal {
+    position: fixed;
+    top: -10px;
+    font-size: 20px;
+    animation: fall linear infinite;
+}
+
+@keyframes fall {
+    0% { transform: translateY(-10px) rotate(0deg); opacity:1; }
+    100% { transform: translateY(100vh) rotate(360deg); opacity:0; }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <h1>My Dearest Iqra ❤️</h1>
+
+    <div class="gallery">
+
+        <div class="memory">
+            <img src="IMG20260204132123.jpg">
+            <div class="caption">
+                The day we painted memories instead of paper. 🎨  
+                That red handprint still beats inside my chest.
+            </div>
+        </div>
+
+        <div class="memory">
+            <img src="IMG20250509173134.jpg">
+            <div class="caption">
+                In your hug, I found my forever home. 🫂  
+                That moment… I wished time would stop.
+            </div>
+        </div>
+
+        <div class="memory">
+            <img src="IMG20260107154659.jpg">
+            <div class="caption">
+                27-10-2023 ❤️  
+                The day our hands made a heart…  
+                but our souls already had.
+            </div>
+        </div>
+
+        <div class="IMG20250712092400.jpg">
+            <img src="memory4.jpg">
+            <div class="caption">
+                Another page in our beautiful story.  
+                Every picture with you feels like destiny.
+            </div>
+        </div>
+
+        <div class="IMG20250621024306.jpg">
+            <img src="memory5.jpg">
+            <div class="caption">
+                With you, even silence feels magical.  
+                I would choose you in every lifetime.
+            </div>
+        </div>
+
+    </div>
+
+    <button onclick="openLetter()">Open Hidden Letter 💌</button>
+
+    <div class="secret-letter" id="loveLetter">
+        <h2>To My Iqra,</h2>
+        <p>
+            You love writing in your diary...  
+            so today I wrote one for you.  
+
+            Every memory with you is a page.  
+            Every smile of yours is a paragraph.  
+            Every hug is a chapter I never want to end.  
+
+            If love had handwriting,  
+            it would look exactly like yours.  
+
+            You are my peace.  
+            My safe place.  
+            My forever. ❤️  
+
+            — Always Yours
+        </p>
+    </div>
+
+</div>
+
+<script>
+function openLetter() {
+    document.getElementById("loveLetter").style.display = "block";
+}
+
+/* 🌹 Falling Rose Petals */
+function createPetal() {
+    const petal = document.createElement("div");
+    petal.classList.add("petal");
+    petal.innerHTML = "🌹";
+    petal.style.left = Math.random() * 100 + "vw";
+    petal.style.animationDuration = (Math.random() * 3 + 3) + "s";
+    document.body.appendChild(petal);
+
+    setTimeout(() => {
+        petal.remove();
+    }, 6000);
+}
+
+setInterval(createPetal, 300);
+</script>
+
+</body>
+</html>
